@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "SIMASTER Auto-CAPTCHA",
+  "version": "0.0.0",
+  "description": "This extensions automatically solves KRS CAPTCHAs.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://simaster.ugm.ac.id/*",
+        "http://simaster.ugm.ac.id/*"
+      ],
+      "js": ["tesseract.min.js", "captcha.js"]
+    }
+  ]
+}
