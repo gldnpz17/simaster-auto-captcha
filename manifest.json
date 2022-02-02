@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "SIMASTER Auto-CAPTCHA",
   "version": "0.0.0",
-  "description": "This extensions automatically solves KRS CAPTCHAs.",
+  "description": "This extension automatically solves KRS CAPTCHAs.",
   "content_scripts": [
     {
       "matches": [
