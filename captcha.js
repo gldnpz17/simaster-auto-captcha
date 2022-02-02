@@ -59,8 +59,11 @@ async function solve() {
   const imgElement = document.querySelector(`[src^="https://simaster.ugm.ac.id/sia_krs/input_krs/captcha1"]`)
   const submitButton = document.getElementById("f_captcha").querySelector(".btn-success")
 
+  // This refetches the image and it would refresh the captcha. 
+  // But it's fine since the last generated captcha is the valid one.
   const dataUrl = await imageUrlToDataUrl(imgElement.src)
 
+  // Update the img element to display the recently fetched image.
   imgElement.src = dataUrl
 
   const captchaValue = (await Tesseract.recognize(dataUrl, 'eng', { logger: msg => statusBar.setStatus(msg.status) })).data.text
